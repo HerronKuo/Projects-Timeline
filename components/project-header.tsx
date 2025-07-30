@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function ProjectHeader({ project }: { project: Project }) {
     return (
-        <Card className="glass-effect">
+        <Card className="project-card">
             <CardHeader>
                 <div className="flex items-center text-sm text-muted-foreground mb-3">
                     <CalendarIcon className="mr-2 h-4 w-4" />

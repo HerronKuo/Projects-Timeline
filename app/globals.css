@@ -66,6 +66,22 @@
   .dark .glass-effect {
     @apply bg-gray-900/60 backdrop-blur-sm border border-gray-700/30;
   }
+
+  .project-card {
+    @apply glass-effect border-blue-500/50 bg-gradient-to-br from-blue-50/10 to-purple-50/10;
+  }
+
+  .dark .project-card {
+    @apply border-blue-400/40 bg-gradient-to-br from-blue-900/20 to-purple-900/20;
+  }
+
+  .log-card {
+    @apply glass-effect border-green-500/50 bg-gradient-to-br from-green-50/10 to-emerald-50/10;
+  }
+
+  .dark .log-card {
+    @apply border-green-400/40 bg-gradient-to-br from-green-900/20 to-emerald-900/20;
+  }
 }
 
 /* Enhanced Prose Styles for Better Markdown Rendering */

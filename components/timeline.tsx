@@ -31,7 +31,7 @@ export function Timeline({ projects }: { projects: Project[] }) {
                             <span className="timeline-number">{index + 1}</span>
                         </div>
                         {index < sortedProjects.length - 1 && (
-                            <div className="w-0.5 h-20 bg-gradient-to-b from-blue-500/50 to-purple-500/50 mt-4"></div>
+                            <div className="w-0.5 h-40 bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>
                         )}
                     </div>
                     <Card className="w-full glass-effect hover:shadow-xl transition-all duration-300 flex-grow">
