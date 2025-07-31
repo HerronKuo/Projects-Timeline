@@ -28,7 +28,6 @@ export function Timeline({ projects }: { projects: Project[] }) {
                 <div key={project.slug} className="flex group">
                     <div className="flex flex-col items-center mr-6 flex-shrink-0">
                         <div className="timeline-circle bg-gradient-to-br from-blue-500 to-purple-600 text-white font-bold shadow-lg transition-transform duration-300 hover:scale-110">
-                            <span className="timeline-number">{index + 1}</span>
                         </div>
                         {index < sortedProjects.length - 1 && (
                             <div className="w-0.5 h-40 bg-gradient-to-b from-blue-500/50 to-purple-500/50"></div>

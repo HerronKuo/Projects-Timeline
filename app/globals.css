@@ -3,567 +3,582 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.75rem;
-  }
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 221.2 83.2% 53.3%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222.2 84% 4.9%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 210 40% 96%;
+        --accent-foreground: 222.2 84% 4.9%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 221.2 83.2% 53.3%;
+        --radius: 0.75rem;
+    }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
-  }
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 217.2 91.2% 59.8%;
+        --primary-foreground: 222.2 84% 4.9%;
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 224.3 76.3% 94.1%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
 
 @layer utilities {
-  .glass-effect {
-    @apply bg-white/60 backdrop-blur-sm border border-white/20 shadow-lg;
-  }
+    .glass-effect {
+        @apply bg-white/60 backdrop-blur-sm border border-white/20 shadow-lg;
+    }
 
-  .dark .glass-effect {
-    @apply bg-gray-900/60 backdrop-blur-sm border border-gray-700/30;
-  }
+    .dark .glass-effect {
+        @apply bg-gray-900/60 backdrop-blur-sm border border-gray-700/30;
+    }
 
-  .project-card {
-    @apply glass-effect border-blue-500/50 bg-gradient-to-br from-blue-50/10 to-purple-50/10;
-  }
+    .project-card {
+        @apply glass-effect border-4 border-blue-500/50 bg-gradient-to-br from-blue-50/10 to-purple-50/10;
+    }
 
-  .dark .project-card {
-    @apply border-blue-400/40 bg-gradient-to-br from-blue-900/20 to-purple-900/20;
-  }
+    .dark .project-card {
+        @apply border-4 border-blue-400/40 bg-gradient-to-br from-blue-900/20 to-purple-900/20;
+    }
 
-  .log-card {
-    @apply glass-effect border-green-500/50 bg-gradient-to-br from-green-50/10 to-emerald-50/10;
-  }
+    .log-card {
+        @apply glass-effect border-green-500/50 bg-gradient-to-br from-green-50/10 to-emerald-50/10;
+    }
 
-  .dark .log-card {
-    @apply border-green-400/40 bg-gradient-to-br from-green-900/20 to-emerald-900/20;
-  }
+    .dark .log-card {
+        @apply border-green-400/40 bg-gradient-to-br from-green-900/20 to-emerald-900/20;
+    }
 }
 
 /* Enhanced Prose Styles for Better Markdown Rendering */
 @layer components {
-  .prose {
-    @apply max-w-none text-foreground;
-  }
+    .prose {
+        @apply max-w-none text-foreground;
+    }
 
-  /* Headings - FIXED LINE HEIGHTS */
-  .prose h1 {
-    @apply text-3xl font-bold mt-8 mb-6 text-foreground border-b border-border pb-3;
-    line-height: 1.3 !important;
-    padding-bottom: 0.75rem !important;
-    margin-bottom: 1.5rem !important;
-  }
+    /* Headings - FIXED LINE HEIGHTS */
+    .prose h1 {
+        @apply text-3xl font-bold mt-8 mb-6 text-foreground border-b border-border pb-3;
+        line-height: 1.3 !important;
+        padding-bottom: 0.75rem !important;
+        margin-bottom: 1.5rem !important;
+    }
 
-  .prose h2 {
-    @apply text-2xl font-bold mt-6 mb-4 text-foreground border-b border-border pb-2;
-    line-height: 1.35 !important;
-    padding-bottom: 0.5rem !important;
-    margin-bottom: 1rem !important;
-  }
+    .prose h2 {
+        @apply text-2xl font-bold mt-6 mb-4 text-foreground border-b border-border pb-2;
+        line-height: 1.35 !important;
+        padding-bottom: 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
 
-  .prose h3 {
-    @apply text-xl font-semibold mt-5 mb-3 text-foreground;
-    line-height: 1.4 !important;
-    margin-bottom: 0.75rem !important;
-  }
+    .prose h3 {
+        @apply text-xl font-semibold mt-5 mb-3 text-foreground;
+        line-height: 1.4 !important;
+        margin-bottom: 0.75rem !important;
+    }
 
-  .prose h4 {
-    @apply text-lg font-semibold mt-4 mb-2 text-foreground;
-    line-height: 1.45 !important;
-    margin-bottom: 0.5rem !important;
-  }
+    .prose h4 {
+        @apply text-lg font-semibold mt-4 mb-2 text-foreground;
+        line-height: 1.45 !important;
+        margin-bottom: 0.5rem !important;
+    }
 
-  .prose h5 {
-    @apply text-base font-semibold mt-3 mb-2 text-foreground;
-    line-height: 1.5 !important;
-    margin-bottom: 0.5rem !important;
-  }
+    .prose h5 {
+        @apply text-base font-semibold mt-3 mb-2 text-foreground;
+        line-height: 1.5 !important;
+        margin-bottom: 0.5rem !important;
+    }
 
-  .prose h6 {
-    @apply text-sm font-semibold mt-3 mb-2 text-muted-foreground;
-    line-height: 1.5 !important;
-    margin-bottom: 0.5rem !important;
-  }
+    .prose h6 {
+        @apply text-sm font-semibold mt-3 mb-2 text-muted-foreground;
+        line-height: 1.5 !important;
+        margin-bottom: 0.5rem !important;
+    }
 
-  /* Text elements */
-  .prose p {
-    @apply mb-4 text-foreground;
-    line-height: 1.7 !important;
-    margin-bottom: 1rem !important;
-  }
+    /* Text elements */
+    .prose p {
+        @apply mb-4 text-foreground;
+        line-height: 1.7 !important;
+        margin-bottom: 1rem !important;
+    }
 
-  .prose a {
-    @apply text-primary hover:text-primary/80 underline underline-offset-4 transition-colors;
-  }
+    .prose a {
+        @apply text-primary hover:text-primary/80 underline underline-offset-4 transition-colors;
+    }
 
-  .prose strong {
-    @apply font-semibold text-foreground;
-  }
+    .prose strong {
+        @apply font-semibold text-foreground;
+    }
 
-  .prose em {
-    @apply italic text-foreground;
-  }
+    .prose em {
+        @apply italic text-foreground;
+    }
 
-  /* Inline code */
-  .prose code:not(pre code) {
-    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground border relative;
-  }
+    /* Inline code */
+    .prose code:not(pre code) {
+        @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground border relative;
+    }
 
-  .prose code:not(pre code)::before,
-  .prose code:not(pre code)::after {
-    content: none !important;
-  }
+    .prose code:not(pre code)::before,
+    .prose code:not(pre code)::after {
+        content: none !important;
+    }
 
-  /* Code blocks - Main styling with built-in syntax highlighting */
-  .prose pre {
-    @apply my-6 overflow-x-auto rounded-lg border relative;
-    background: #0d1117 !important;
-    padding: 1.5rem !important;
-    font-family: "Fira Code", "Monaco", "Cascadia Code", "Roboto Mono", monospace !important;
-    font-size: 0.875rem !important;
-    line-height: 1.6 !important;
-    margin: 1.5rem 0 !important;
-  }
-
-  .prose pre code {
-    @apply bg-transparent p-0 border-0 text-sm font-mono;
-    background: transparent !important;
-    color: #e6edf3 !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-  }
-
-  /* Light mode code blocks */
-  @media (prefers-color-scheme: light) {
+    /* Code blocks - Main styling with built-in syntax highlighting */
     .prose pre {
-      background: #f6f8fa !important;
-      border: 1px solid #d0d7de !important;
+        @apply my-6 overflow-x-auto rounded-lg border relative;
+        background: #0d1117 !important;
+        padding: 1.5rem !important;
+        font-family: "Fira Code", "Monaco", "Cascadia Code", "Roboto Mono", monospace !important;
+        font-size: 0.875rem !important;
+        line-height: 1.6 !important;
+        margin: 1.5rem 0 !important;
     }
 
     .prose pre code {
-      color: #24292f !important;
+        @apply bg-transparent p-0 border-0 text-sm font-mono;
+        background: transparent !important;
+        color: #e6edf3 !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
     }
-  }
 
-  /* Dark mode code blocks */
-  .dark .prose pre {
-    background: #0d1117 !important;
-    border: 1px solid #30363d !important;
-  }
+    /* Light mode code blocks */
+    @media (prefers-color-scheme: light) {
+        .prose pre {
+            background: #f6f8fa !important;
+            border: 1px solid #d0d7de !important;
+        }
 
-  .dark .prose pre code {
-    color: #e6edf3 !important;
-  }
+        .prose pre code {
+            color: #24292f !important;
+        }
+    }
 
-  /* Syntax highlighting colors - GitHub Dark theme */
-  .prose .hljs-keyword,
-  .prose .hljs-selector-tag,
-  .prose .hljs-literal,
-  .prose .hljs-section,
-  .prose .hljs-link {
-    color: #ff7b72 !important;
-  }
+    /* Dark mode code blocks */
+    .dark .prose pre {
+        background: #0d1117 !important;
+        border: 1px solid #30363d !important;
+    }
 
-  .prose .hljs-string,
-  .prose .hljs-attr {
-    color: #a5d6ff !important;
-  }
+    .dark .prose pre code {
+        color: #e6edf3 !important;
+    }
 
-  .prose .hljs-number,
-  .prose .hljs-regexp,
-  .prose .hljs-addition {
-    color: #79c0ff !important;
-  }
-
-  .prose .hljs-comment,
-  .prose .hljs-quote,
-  .prose .hljs-deletion {
-    color: #8b949e !important;
-    font-style: italic;
-  }
-
-  .prose .hljs-function,
-  .prose .hljs-class,
-  .prose .hljs-title {
-    color: #d2a8ff !important;
-  }
-
-  .prose .hljs-variable,
-  .prose .hljs-template-variable,
-  .prose .hljs-attribute {
-    color: #ffa657 !important;
-  }
-
-  .prose .hljs-type,
-  .prose .hljs-built_in,
-  .prose .hljs-builtin-name {
-    color: #7ee787 !important;
-  }
-
-  .prose .hljs-meta,
-  .prose .hljs-meta-keyword {
-    color: #79c0ff !important;
-  }
-
-  .prose .hljs-tag {
-    color: #7ee787 !important;
-  }
-
-  .prose .hljs-name {
-    color: #ff7b72 !important;
-  }
-
-  .prose .hljs-selector-id,
-  .prose .hljs-selector-class {
-    color: #d2a8ff !important;
-  }
-
-  .prose .hljs-property {
-    color: #79c0ff !important;
-  }
-
-  .prose .hljs-doctag,
-  .prose .hljs-strong {
-    font-weight: bold;
-  }
-
-  .prose .hljs-emphasis {
-    font-style: italic;
-  }
-
-  /* Light mode syntax highlighting */
-  @media (prefers-color-scheme: light) {
+    /* Syntax highlighting colors - GitHub Dark theme */
     .prose .hljs-keyword,
     .prose .hljs-selector-tag,
     .prose .hljs-literal,
     .prose .hljs-section,
     .prose .hljs-link {
-      color: #d73a49 !important;
+        color: #ff7b72 !important;
     }
 
     .prose .hljs-string,
     .prose .hljs-attr {
-      color: #032f62 !important;
+        color: #a5d6ff !important;
     }
 
     .prose .hljs-number,
     .prose .hljs-regexp,
     .prose .hljs-addition {
-      color: #005cc5 !important;
+        color: #79c0ff !important;
     }
 
     .prose .hljs-comment,
     .prose .hljs-quote,
     .prose .hljs-deletion {
-      color: #6a737d !important;
-      font-style: italic;
+        color: #8b949e !important;
+        font-style: italic;
     }
 
     .prose .hljs-function,
     .prose .hljs-class,
     .prose .hljs-title {
-      color: #6f42c1 !important;
+        color: #d2a8ff !important;
     }
 
     .prose .hljs-variable,
     .prose .hljs-template-variable,
     .prose .hljs-attribute {
-      color: #e36209 !important;
+        color: #ffa657 !important;
     }
 
     .prose .hljs-type,
     .prose .hljs-built_in,
     .prose .hljs-builtin-name {
-      color: #22863a !important;
+        color: #7ee787 !important;
     }
-  }
 
-  /* Dark mode syntax highlighting */
-  .dark .prose .hljs-keyword,
-  .dark .prose .hljs-selector-tag,
-  .dark .prose .hljs-literal,
-  .dark .prose .hljs-section,
-  .dark .prose .hljs-link {
-    color: #ff7b72 !important;
-  }
+    .prose .hljs-meta,
+    .prose .hljs-meta-keyword {
+        color: #79c0ff !important;
+    }
 
-  .dark .prose .hljs-string,
-  .dark .prose .hljs-attr {
-    color: #a5d6ff !important;
-  }
+    .prose .hljs-tag {
+        color: #7ee787 !important;
+    }
 
-  .dark .prose .hljs-number,
-  .dark .prose .hljs-regexp,
-  .dark .prose .hljs-addition {
-    color: #79c0ff !important;
-  }
+    .prose .hljs-name {
+        color: #ff7b72 !important;
+    }
 
-  .dark .prose .hljs-comment,
-  .dark .prose .hljs-quote,
-  .dark .prose .hljs-deletion {
-    color: #8b949e !important;
-    font-style: italic;
-  }
+    .prose .hljs-selector-id,
+    .prose .hljs-selector-class {
+        color: #d2a8ff !important;
+    }
 
-  .dark .prose .hljs-function,
-  .dark .prose .hljs-class,
-  .dark .prose .hljs-title {
-    color: #d2a8ff !important;
-  }
+    .prose .hljs-property {
+        color: #79c0ff !important;
+    }
 
-  .dark .prose .hljs-variable,
-  .dark .prose .hljs-template-variable,
-  .dark .prose .hljs-attribute {
-    color: #ffa657 !important;
-  }
+    .prose .hljs-doctag,
+    .prose .hljs-strong {
+        font-weight: bold;
+    }
 
-  .dark .prose .hljs-type,
-  .dark .prose .hljs-built_in,
-  .dark .prose .hljs-builtin-name {
-    color: #7ee787 !important;
-  }
+    .prose .hljs-emphasis {
+        font-style: italic;
+    }
 
-  /* Language label for code blocks */
-  .prose pre[class*="language-"]::before {
-    content: attr(data-language);
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.75rem;
-    color: #8b949e;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
+    /* Light mode syntax highlighting */
+    @media (prefers-color-scheme: light) {
+        .prose .hljs-keyword,
+        .prose .hljs-selector-tag,
+        .prose .hljs-literal,
+        .prose .hljs-section,
+        .prose .hljs-link {
+            color: #d73a49 !important;
+        }
 
-  /* Blockquotes */
-  .prose blockquote {
-    @apply border-l-4 border-primary pl-4 italic text-muted-foreground my-6 bg-muted/30 py-3 rounded-r;
-    line-height: 1.6 !important;
-    margin: 1.5rem 0 !important;
-    padding: 0.75rem 1rem !important;
-  }
+        .prose .hljs-string,
+        .prose .hljs-attr {
+            color: #032f62 !important;
+        }
 
-  /* Lists */
-  .prose ul {
-    @apply list-disc list-inside mb-4 space-y-2;
-    line-height: 1.6 !important;
-    margin-bottom: 1rem !important;
-  }
+        .prose .hljs-number,
+        .prose .hljs-regexp,
+        .prose .hljs-addition {
+            color: #005cc5 !important;
+        }
 
-  .prose ol {
-    @apply list-decimal list-inside mb-4 space-y-2;
-    line-height: 1.6 !important;
-    margin-bottom: 1rem !important;
-  }
+        .prose .hljs-comment,
+        .prose .hljs-quote,
+        .prose .hljs-deletion {
+            color: #6a737d !important;
+            font-style: italic;
+        }
 
-  .prose li {
-    @apply text-foreground;
-    line-height: 1.6 !important;
-    margin-bottom: 0.25rem !important;
-  }
+        .prose .hljs-function,
+        .prose .hljs-class,
+        .prose .hljs-title {
+            color: #6f42c1 !important;
+        }
 
-  .prose ul ul,
-  .prose ol ol,
-  .prose ul ol,
-  .prose ol ul {
-    @apply mt-2 ml-6;
-    margin-top: 0.5rem !important;
-  }
+        .prose .hljs-variable,
+        .prose .hljs-template-variable,
+        .prose .hljs-attribute {
+            color: #e36209 !important;
+        }
 
-  /* Tables */
-  .prose table {
-    @apply w-full border-collapse border border-border my-6 rounded-lg overflow-hidden;
-    margin: 1.5rem 0 !important;
-  }
+        .prose .hljs-type,
+        .prose .hljs-built_in,
+        .prose .hljs-builtin-name {
+            color: #22863a !important;
+        }
+    }
 
-  .prose th {
-    @apply border border-border px-4 py-3 bg-muted font-semibold text-left;
-    line-height: 1.5 !important;
-  }
+    /* Dark mode syntax highlighting */
+    .dark .prose .hljs-keyword,
+    .dark .prose .hljs-selector-tag,
+    .dark .prose .hljs-literal,
+    .dark .prose .hljs-section,
+    .dark .prose .hljs-link {
+        color: #ff7b72 !important;
+    }
 
-  .prose td {
-    @apply border border-border px-4 py-3;
-    line-height: 1.5 !important;
-  }
+    .dark .prose .hljs-string,
+    .dark .prose .hljs-attr {
+        color: #a5d6ff !important;
+    }
 
-  .prose tbody tr:nth-child(even) {
-    @apply bg-muted/30;
-  }
+    .dark .prose .hljs-number,
+    .dark .prose .hljs-regexp,
+    .dark .prose .hljs-addition {
+        color: #79c0ff !important;
+    }
 
-  /* Horizontal rules */
-  .prose hr {
-    @apply border-border my-8 border-t-2;
-    margin: 2rem 0 !important;
-  }
+    .dark .prose .hljs-comment,
+    .dark .prose .hljs-quote,
+    .dark .prose .hljs-deletion {
+        color: #8b949e !important;
+        font-style: italic;
+    }
 
-  /* Images */
-  .prose img {
-    @apply rounded-lg my-6 max-w-full h-auto shadow-lg;
-    margin: 1.5rem 0 !important;
-  }
+    .dark .prose .hljs-function,
+    .dark .prose .hljs-class,
+    .dark .prose .hljs-title {
+        color: #d2a8ff !important;
+    }
 
-  /* Heading links */
-  .prose .heading-link {
-    @apply no-underline hover:underline;
-  }
+    .dark .prose .hljs-variable,
+    .dark .prose .hljs-template-variable,
+    .dark .prose .hljs-attribute {
+        color: #ffa657 !important;
+    }
 
-  /* Task lists (GitHub style) */
-  .prose input[type="checkbox"] {
-    @apply mr-2 accent-primary;
-  }
+    .dark .prose .hljs-type,
+    .dark .prose .hljs-built_in,
+    .dark .prose .hljs-builtin-name {
+        color: #7ee787 !important;
+    }
 
-  .prose li:has(input[type="checkbox"]) {
-    @apply list-none;
-    line-height: 1.6 !important;
-  }
+    /* Language label for code blocks */
+    .prose pre[class*="language-"]::before {
+        content: attr(data-language);
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.75rem;
+        color: #8b949e;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
 
-  /* Strikethrough */
-  .prose del {
-    @apply line-through text-muted-foreground;
-  }
+    /* Blockquotes */
+    .prose blockquote {
+        @apply border-l-4 border-primary pl-4 italic text-muted-foreground my-6 bg-muted/30 py-3 rounded-r;
+        line-height: 1.6 !important;
+        margin: 1.5rem 0 !important;
+        padding: 0.75rem 1rem !important;
+    }
 
-  /* Responsive design */
-  @media (max-width: 640px) {
+    /* Lists */
+    .prose ul {
+        @apply list-disc list-inside mb-4 space-y-2;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .prose ol {
+        @apply list-decimal list-inside mb-4 space-y-2;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .prose li {
+        @apply text-foreground;
+        line-height: 1.6 !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .prose ul ul,
+    .prose ol ol,
+    .prose ul ol,
+    .prose ol ul {
+        @apply mt-2 ml-6;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Tables */
     .prose table {
-      @apply text-xs;
+        @apply w-full border-collapse border border-border my-6 rounded-lg overflow-hidden;
+        margin: 1.5rem 0 !important;
     }
 
-    .prose th,
+    .prose th {
+        @apply border border-border px-4 py-3 bg-muted font-semibold text-left;
+        line-height: 1.5 !important;
+    }
+
     .prose td {
-      @apply px-2 py-2;
+        @apply border border-border px-4 py-3;
+        line-height: 1.5 !important;
     }
 
-    .prose pre {
-      font-size: 0.75rem !important;
-      padding: 1rem !important;
+    .prose tbody tr:nth-child(even) {
+        @apply bg-muted/30;
     }
 
-    .prose h1 {
-      @apply text-2xl;
-      line-height: 1.3 !important;
+    /* Horizontal rules */
+    .prose hr {
+        @apply border-border my-8 border-t-2;
+        margin: 2rem 0 !important;
     }
 
-    .prose h2 {
-      @apply text-xl;
-      line-height: 1.35 !important;
+    /* Images */
+    .prose img {
+        @apply rounded-lg my-6 max-w-full h-auto shadow-lg;
+        margin: 1.5rem 0 !important;
     }
 
-    .prose h3 {
-      @apply text-lg;
-      line-height: 1.4 !important;
+    /* Heading links */
+    .prose .heading-link {
+        @apply no-underline hover:underline;
     }
-  }
 
-  /* Scrollbar for code blocks */
-  .prose pre::-webkit-scrollbar {
-    height: 8px;
-  }
+    /* Task lists (GitHub style) */
+    .prose input[type="checkbox"] {
+        @apply mr-2 accent-primary;
+    }
 
-  .prose pre::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-  }
+    .prose li:has(input[type="checkbox"]) {
+        @apply list-none;
+        line-height: 1.6 !important;
+    }
 
-  .prose pre::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-  }
+    /* Strikethrough */
+    .prose del {
+        @apply line-through text-muted-foreground;
+    }
 
-  .prose pre::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
-  }
+    /* Responsive design */
+    @media (max-width: 640px) {
+        .prose table {
+            @apply text-xs;
+        }
 
-  /* Timeline circle fixes */
-  .timeline-circle {
-    width: 48px !important;
-    height: 48px !important;
-    min-width: 48px !important;
-    min-height: 48px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    aspect-ratio: 1 / 1 !important;
-    padding: 2px !important;
-    box-sizing: border-box !important;
-  }
+        .prose th,
+        .prose td {
+            @apply px-2 py-2;
+        }
 
-  /* Timeline number styling */
-  .timeline-number {
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    line-height: 1.2 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    padding-bottom: 1px !important;
-    text-align: center !important;
-    overflow: visible !important;
-  }
+        .prose pre {
+            font-size: 0.75rem !important;
+            padding: 1rem !important;
+        }
 
-  /* Additional fix for font rendering */
-  .timeline-circle,
-  .timeline-number {
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    text-rendering: optimizeLegibility !important;
-  }
+        .prose h1 {
+            @apply text-2xl;
+            line-height: 1.3 !important;
+        }
 
-  /* General typography improvements */
-  .prose * {
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    text-rendering: optimizeLegibility !important;
-  }
+        .prose h2 {
+            @apply text-xl;
+            line-height: 1.35 !important;
+        }
+
+        .prose h3 {
+            @apply text-lg;
+            line-height: 1.4 !important;
+        }
+    }
+
+    /* Scrollbar for code blocks */
+    .prose pre::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .prose pre::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+    }
+
+    .prose pre::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+
+    .prose pre::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Timeline circle fixes */
+    .timeline-circle {
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        min-height: 48px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        aspect-ratio: 1 / 1 !important;
+        padding: 2px !important;
+        box-sizing: border-box !important;
+    }
+
+    .timeline-circle-small {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        aspect-ratio: 1 / 1 !important;
+        padding: 2px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Timeline number styling */
+    .timeline-number {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding-bottom: 1px !important;
+        text-align: center !important;
+        overflow: visible !important;
+    }
+
+    /* Additional fix for font rendering */
+    .timeline-circle,
+    .timeline-number {
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        text-rendering: optimizeLegibility !important;
+    }
+
+    /* General typography improvements */
+    .prose * {
+        -webkit-font-smoothing: antialiased !important;
+        -moz-osx-font-smoothing: grayscale !important;
+        text-rendering: optimizeLegibility !important;
+    }
 }

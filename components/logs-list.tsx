@@ -23,17 +23,17 @@ export function LogsList({ logs }: { logs: Log[] }) {
         };
 
         const handleEscapeKey = (event: KeyboardEvent) => {
-            if (event.key === 'Escape' && expandedLog) {
+            if (event.key === "Escape" && expandedLog) {
                 setExpandedLog(null);
             }
         };
 
-        document.addEventListener('mousedown', handleClickOutside);
-        document.addEventListener('keydown', handleEscapeKey);
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("keydown", handleEscapeKey);
 
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-            document.removeEventListener('keydown', handleEscapeKey);
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleEscapeKey);
         };
     }, [expandedLog]);
 
@@ -54,47 +54,55 @@ export function LogsList({ logs }: { logs: Log[] }) {
     }
 
     return (
-        <div className="space-y-6">
-            {sortedLogs.map((log) => {
+        <div className="space-y-4">
+            {sortedLogs.map((log, index) => {
                 const isExpanded = expandedLog === log.slug;
                 return (
-                    <Card
-                        key={log.slug}
-                        ref={(el) => (cardRefs.current[log.slug] = el)}
-                        className="log-card hover:shadow-xl transition-all duration-300 cursor-pointer"
-                        onClick={() => toggleLog(log.slug)}
-                    >
-                        <CardHeader>
-                            <div className="flex items-center justify-between">
-                                <div className="flex-1">
-                                    <div className="flex items-center text-sm text-muted-foreground mb-2">
-                                        <CalendarIcon className="mr-2 h-4 w-4" />
-                                        {new Date(log.date).toLocaleDateString("en-US", {
-                                            year: "numeric",
-                                            month: "long",
-                                            day: "numeric",
-                                        })}
-                                    </div>
-                                    <CardTitle className="text-xl">{log.title}</CardTitle>
-                                </div>
-                                <div className="flex-shrink-0 ml-4">
-                                    {isExpanded ? (
-                                        <ChevronUpIcon className="h-5 w-5 text-muted-foreground" />
-                                    ) : (
-                                        <ChevronDownIcon className="h-5 w-5 text-muted-foreground" />
-                                    )}
-                                </div>
+                    <div key={log.slug} className="flex group">
+                        <div className="flex flex-col items-center mr-4 flex-shrink-0">
+                            <div className={`timeline-circle-small bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold shadow-lg transition-all duration-300 hover:scale-110 ${isExpanded ? 'opacity-0' : 'opacity-100'}`}>
                             </div>
-                        </CardHeader>
-                        {isExpanded && (
-                            <CardContent>
-                                <div
-                                    className="prose dark:prose-invert max-w-none animate-in slide-in-from-top-2 duration-300"
-                                    dangerouslySetInnerHTML={{ __html: log.content }}
-                                />
-                            </CardContent>
-                        )}
-                    </Card>
+                            {index < sortedLogs.length - 1 && (
+                                <div className={`w-0.5 h-24 bg-gradient-to-b from-green-500/50 to-emerald-500/50 mt-1 transition-opacity duration-300 ${isExpanded ? 'opacity-0' : 'opacity-100'}`}></div>
+                            )}
+                        </div>
+                        <Card
+                            ref={(el) => (cardRefs.current[log.slug] = el)}
+                            className={`w-full hover:shadow-xl transition-all duration-300 cursor-pointer flex-grow min-w-0 ${isExpanded ? "log-card shadow-green-500/20" : "glass-effect"}`}
+                            onClick={() => toggleLog(log.slug)}
+                        >
+                            <CardHeader>
+                                <div className="flex items-center justify-between">
+                                    <div className="flex-1">
+                                        <div className="flex items-center text-sm text-muted-foreground mb-2">
+                                            <CalendarIcon className="mr-2 h-4 w-4" />
+                                            {new Date(log.date).toLocaleDateString("en-US", {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                            })}
+                                        </div>
+                                        <CardTitle className="text-xl">{log.title}</CardTitle>
+                                    </div>
+                                    <div className="flex-shrink-0 ml-4">
+                                        {isExpanded ? (
+                                            <ChevronUpIcon className="h-5 w-5 text-muted-foreground" />
+                                        ) : (
+                                            <ChevronDownIcon className="h-5 w-5 text-muted-foreground" />
+                                        )}
+                                    </div>
+                                </div>
+                            </CardHeader>
+                            {isExpanded && (
+                                <CardContent>
+                                    <div
+                                        className="prose dark:prose-invert max-w-none animate-in slide-in-from-top-2 duration-300"
+                                        dangerouslySetInnerHTML={{ __html: log.content }}
+                                    />
+                                </CardContent>
+                            )}
+                        </Card>
+                    </div>
                 );
             })}
         </div>
