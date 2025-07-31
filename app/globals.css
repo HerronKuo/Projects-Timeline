@@ -76,11 +76,27 @@
     }
 
     .log-card {
-        @apply glass-effect border-green-500/50 bg-gradient-to-br from-green-50/10 to-emerald-50/10;
+        @apply glass-effect bg-gradient-to-br from-green-50/10 to-emerald-50/10;
+        border: 4px solid rgb(34 197 94 / 0.5);
+        transition: all 300ms ease-in-out;
     }
 
     .dark .log-card {
-        @apply border-green-400/40 bg-gradient-to-br from-green-900/20 to-emerald-900/20;
+        @apply bg-gradient-to-br from-green-900/20 to-emerald-900/20;
+        border: 4px solid rgb(34 197 94 / 0.4);
+        transition: all 300ms ease-in-out;
+    }
+
+    .log-card-collapsed {
+        @apply glass-effect bg-gradient-to-br from-green-50/10 to-emerald-50/10;
+        border: 1px solid rgb(34 197 94 / 0.2);
+        transition: all 300ms ease-in-out;
+    }
+
+    .dark .log-card-collapsed {
+        @apply bg-gradient-to-br from-green-900/20 to-emerald-900/20;
+        border: 1px solid rgb(34 197 94 / 0.15);
+        transition: all 300ms ease-in-out;
     }
 }
 

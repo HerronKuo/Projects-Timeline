@@ -59,21 +59,15 @@ export function LogsList({ logs }: { logs: Log[] }) {
                 const isExpanded = expandedLog === log.slug;
                 return (
                     <div key={log.slug} className="flex group">
-                        <div className="flex flex-col items-center mr-4 flex-shrink-0">
-                            <div
-                                className={`timeline-circle-small bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold shadow-lg transition-all duration-300 ${
-                                    isExpanded ? "opacity-0" : "opacity-100"
-                                }`}
-                            ></div>
-                            {index < sortedLogs.length - 1 && (
-                                <div
-                                    className={`w-0.5 h-24 bg-gradient-to-b from-green-500/50 to-emerald-500/50 mt-1 transition-opacity duration-300 ${isExpanded ? "opacity-0" : "opacity-100"}`}
-                                ></div>
-                            )}
+                        <div className={`flex flex-col items-center flex-shrink-0 transition-all duration-300 ease-in-out ${isExpanded ? 'opacity-0 -translate-x-6 w-0 mr-0' : 'opacity-100 translate-x-0 w-auto mr-4'}`}>
+                            <div className="timeline-circle-small bg-gradient-to-br from-green-600 to-emerald-600  transition-all duration-300"></div>
+                            {index < sortedLogs.length - 1 && <div className="w-0.5 h-24 bg-gradient-to-b from-green-600/50 to-emerald-600/50 mt-1"></div>}
                         </div>
                         <Card
                             ref={(el) => (cardRefs.current[log.slug] = el)}
-                            className={`w-full hover:shadow-xl transition-all duration-300 cursor-pointer flex-grow min-w-0 ${isExpanded ? "log-card shadow-green-500/20" : "glass-effect"}`}
+                            className={`w-full hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer flex-grow min-w-0 ${
+                                isExpanded ? "log-card shadow-green-500/20" : "log-card-collapsed"
+                            }`}
                             onClick={() => toggleLog(log.slug)}
                         >
                             <CardHeader>
