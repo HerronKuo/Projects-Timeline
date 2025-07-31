@@ -60,10 +60,15 @@ export function LogsList({ logs }: { logs: Log[] }) {
                 return (
                     <div key={log.slug} className="flex group">
                         <div className="flex flex-col items-center mr-4 flex-shrink-0">
-                            <div className={`timeline-circle-small bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold shadow-lg transition-all duration-300 hover:scale-110 ${isExpanded ? 'opacity-0' : 'opacity-100'}`}>
-                            </div>
+                            <div
+                                className={`timeline-circle-small bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold shadow-lg transition-all duration-300 ${
+                                    isExpanded ? "opacity-0" : "opacity-100"
+                                }`}
+                            ></div>
                             {index < sortedLogs.length - 1 && (
-                                <div className={`w-0.5 h-24 bg-gradient-to-b from-green-500/50 to-emerald-500/50 mt-1 transition-opacity duration-300 ${isExpanded ? 'opacity-0' : 'opacity-100'}`}></div>
+                                <div
+                                    className={`w-0.5 h-24 bg-gradient-to-b from-green-500/50 to-emerald-500/50 mt-1 transition-opacity duration-300 ${isExpanded ? "opacity-0" : "opacity-100"}`}
+                                ></div>
                             )}
                         </div>
                         <Card
@@ -85,20 +90,13 @@ export function LogsList({ logs }: { logs: Log[] }) {
                                         <CardTitle className="text-xl">{log.title}</CardTitle>
                                     </div>
                                     <div className="flex-shrink-0 ml-4">
-                                        {isExpanded ? (
-                                            <ChevronUpIcon className="h-5 w-5 text-muted-foreground" />
-                                        ) : (
-                                            <ChevronDownIcon className="h-5 w-5 text-muted-foreground" />
-                                        )}
+                                        {isExpanded ? <ChevronUpIcon className="h-5 w-5 text-muted-foreground" /> : <ChevronDownIcon className="h-5 w-5 text-muted-foreground" />}
                                     </div>
                                 </div>
                             </CardHeader>
                             {isExpanded && (
                                 <CardContent>
-                                    <div
-                                        className="prose dark:prose-invert max-w-none animate-in slide-in-from-top-2 duration-300"
-                                        dangerouslySetInnerHTML={{ __html: log.content }}
-                                    />
+                                    <div className="prose dark:prose-invert max-w-none animate-in slide-in-from-top-2 duration-300" dangerouslySetInnerHTML={{ __html: log.content }} />
                                 </CardContent>
                             )}
                         </Card>

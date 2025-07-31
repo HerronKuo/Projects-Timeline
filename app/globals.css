@@ -537,6 +537,15 @@
         box-sizing: border-box !important;
     }
 
+    @media (max-width: 768px) {
+        .timeline-circle {
+            width: 32px !important;
+            height: 32px !important;
+            min-width: 32px !important;
+            min-height: 32px !important;
+        }
+    }
+
     .timeline-circle-small {
         width: 24px !important;
         height: 24px !important;
